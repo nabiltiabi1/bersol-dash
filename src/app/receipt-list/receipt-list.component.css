@@ -1,0 +1,10 @@
+/* Basic styles for receipt list */
+.receipt-container {
+  padding: 20px;
+}
+.receipt-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
