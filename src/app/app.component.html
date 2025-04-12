@@ -1,0 +1,22 @@
+<div class="app-container">
+  <nav class="left-menu">
+    <div class="logo-container">
+      <img src="assets/logo.png" alt="Company Logo" class="logo">
+    </div>
+    <h2>Menu</h2>
+    <ul>
+      <li><button (click)="currentView = 'products'">Products</button></li>
+      <li><button (click)="currentView = 'receipts'">Receipts</button></li>
+      <li><button (click)="currentView = 'categories'">Categories</button></li>
+    </ul>
+  </nav>
+  <div class="content">
+    <h1>Warehouse Sales Management</h1>
+    <app-product-list *ngIf="currentView === 'products'"></app-product-list>
+    <app-receipt-list *ngIf="currentView === 'receipts'"></app-receipt-list>
+    <div *ngIf="currentView === 'categories'">
+      <h2>Categories</h2>
+      <!-- Categories content will go here -->
+    </div>
+  </div>
+</div>

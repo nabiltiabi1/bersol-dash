@@ -1,0 +1,12 @@
+<input [(ngModel)]="searchTerm" (input)="searchProducts()" placeholder="Search products">
+<div *ngIf="error" class="error">{{ error }}</div>
+<ul>
+  <li *ngFor="let product of paginatedProducts">
+    {{ product.label }} - {{ product.price }}
+  </li>
+</ul>
+<div class="pagination">
+  <button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+  <span>Page {{ currentPage }} of {{ totalPages }}</span>
+  <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+</div>

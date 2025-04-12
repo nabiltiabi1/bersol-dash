@@ -3,12 +3,7 @@ import { ReceiptService } from '../receipt.service';
 
 @Component({
   selector: 'app-receipt-list',
-  template: `
-    <div>
-      <h2>Receipts</h2>
-      <!-- Receipt list will be implemented here -->
-    </div>
-  `
+  templateUrl: './receipt-list.component.html'
 })
 export class ReceiptListComponent {
   constructor(private receiptService: ReceiptService) {}
